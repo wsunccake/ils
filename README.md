@@ -2,6 +2,13 @@
 
 ## usage
 
-docker run -td -p 41017:41017 ils
+```bash
+# pull image
+linux:~ # docker pull docker.io/wsunccake/ils
 
-docker logs ils
+# run service
+linux:~ # docker run -td --restart=always -p 41017:41017 --name ils docker.io/wsunccake/ils
+
+# show log
+linux:~ # docker logs -f ils
+```
